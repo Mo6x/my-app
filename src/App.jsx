@@ -3,7 +3,7 @@ import "./App.css";
 import FormInput from './components/Formlnput';
 
 const App = () => {
-  const [value, setValue] = useState({
+  const [values, setValues] = useState({
     username: "",
     email: "",
     birthday: "",
@@ -60,11 +60,18 @@ const App = () => {
     // console.log(Object.fromEntries(data.entries()));
   };
 
+   
+  const onChange = (e) => {
+    setValues({ ...values, [e.target.name]: e.target.value });
+  }; 
+  
+  console.log(values);
   return (
     <div className="app">
       <form onSubmit={handleSubmit}>
         {inputs.map((input) => (
-          <FormInput key={input.id} name="username" placeholder="Username" />
+          <FormInput key={input.id} {...input} value={values[input.name]}
+            onChange={onChange} />
        ))}
         <button>Submit</button>
       </form>

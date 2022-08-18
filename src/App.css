@@ -1,8 +1,19 @@
-.App{
-    display: flex;
-  text-align: center;
-  justify-content: center;
-  height: 100vh;
+body {
+ background-image: url("img/domenico-loia-hGV2TfOh0ns-unsplash.jpg");
+ background-size: cover;
+ background-position: center;
 }
 
+.app{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
   
+  
+  
+  
+  
+}
+
+    
